@@ -77,7 +77,7 @@ const sendDataToBoxever = (eventType)=>{
         "pos": window._boxever_settings.pointOfSale,
         "browser_id": Boxever.getID(),
         "interactionID":"OOB_EXP",
-	    "interactionName": "ALERT_BAR_SCROLL"
+	    "interactionName": "EMAIL_CAPTURE_BAR"
     };
     Boxever.eventCreate(eventToSent, (data)=>{ }, 'json');
 }
