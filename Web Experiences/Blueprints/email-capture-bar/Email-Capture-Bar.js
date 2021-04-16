@@ -90,5 +90,3 @@ const validateEmail = () =>{
     mailformat ? validation = true: validation = false;
     return validation;
 }
-
-
