@@ -22,15 +22,16 @@ body.show-TopBanner {
     margin-top: 71px !important;
 }
 
-/* Banner styling */
-#bx_TopBanner {
+/* Banner styling (container) */
+#bx-{{ref}} #bx_TopBanner {
     -webkit-box-shadow: 0px 0px 4px 0px rgba(9,9,9,0.4);
     -moz-box-shadow: 0px 0px 4px 0px rgba(9,9,9,0.4);
     box-shadow: 0px 0px 4px 0px rgba(9,9,9,0.4);
     min-width: 330px;
 }
 
-#bx_TopBanner {
+/* Banner styling (container) */
+#bx-{{ref}} #bx_TopBanner {
     position: fixed;
     z-index: 99998;
     height: 71px;
@@ -40,7 +41,8 @@ body.show-TopBanner {
     font-family: [[ Font ]]
 }
 
-#bx_TopBanner .bx_TopBanner__banner {
+/* Banner styling */
+#bx-{{ref}} #bx_TopBanner .bx_TopBanner__banner {
     padding-left: 50px;
     padding-right: 50px;
     color: #000;
@@ -52,7 +54,8 @@ body.show-TopBanner {
     justify-content: space-between;
 }
 
-#bx_TopBanner .bx_TopBanner__p {
+/* Text and button container  */
+#bx-{{ref}} #bx_TopBanner .bx_TopBanner__p {
     margin: 8px 0;
     display: flex;
     align-items: center;
@@ -62,7 +65,8 @@ body.show-TopBanner {
     line-height: 10px;
 }
 
-#bx_TopBanner .bx_TopBanner__p--span {
+/* text */
+#bx-{{ref}} #bx_TopBanner .bx_TopBanner__p--span {
     color: [[Title Text Colour | colour |#444| { group: 1 Text Configuration }]];
     font-size: [[ Title Text Font Size | number | 18 | { group: 1 Text Configuration }]]px;
     line-height: 16.1px;
@@ -70,7 +74,8 @@ body.show-TopBanner {
     padding-right: 40px;
 }
 
-#bx_TopBanner .bx_TopBanner__p--button {
+/* CTA button */
+#bx-{{ref}} #bx_TopBanner .bx_TopBanner__p--button {
     border-radius: 4px;
     color: #fff;
     padding: 10px 23px;
@@ -85,15 +90,18 @@ body.show-TopBanner {
     font-size: [[Button Text Sixe in px | number | 16 | { group: 2 Button Configuration } ]]px;
 }
 
-#bx_TopBanner .bx_TopBanner__p--button:hover {
+/* CTA Button on Hover */
+#bx-{{ref}} #bx_TopBanner .bx_TopBanner__p--button:hover {
     box-shadow: 3px 4.9px 16px rgba(40,40,40,0.6);
     letter-spacing:2px;
     transform: scale(1.03);
+    text-decoration: none !important;
 }
 
-.bx__btn-close:hover,
-.bx__btn-close:focus,
-.bx__btn-close:active {
+/* closing Button on Hover, focus, active */
+#bx-{{ref}} .bx__btn-close:hover,
+#bx-{{ref}} .bx__btn-close:focus,
+#bx-{{ref}} .bx__btn-close:active {
     background-color: transparent;
     box-shadow: none;
     color: #333;
@@ -102,7 +110,7 @@ body.show-TopBanner {
 }
 
 /* close button */
-.bx__btn-close__icon {
+#bx-{{ref}} .bx__btn-close {
     background: [[ X Background Color | colour | #fff|{ required: true, group: 3 Closing Button Configuration } ]];
     top: 30%;  /* special size for alert bar */
     right: 20px;
@@ -119,7 +127,8 @@ body.show-TopBanner {
     cursor: pointer;
 }
 
-.bx__btn-close__icon:after {
+/* close button right side of X  */
+#bx-{{ref}} .bx__btn-close:after {
     background: transparent;
     content: "";
     height: 20px;
@@ -129,7 +138,8 @@ body.show-TopBanner {
     transform: rotate(45deg);
 }
 
-.bx__btn-close__icon:before {
+/* close button left side of X  */
+#bx-{{ref}} .bx__btn-close:before {
     background: transparent;
     content: "";
     height: 20px;
@@ -139,39 +149,44 @@ body.show-TopBanner {
     transform: rotate(-45deg);
 }
 
+
+/* mobile Styling */
 @media only screen and (max-width: 600px) {
-  #bx_TopBanner .bx_TopBanner__banner {
+    /* banner */
+  #bx-{{ref}} #bx_TopBanner .bx_TopBanner__banner {
     height: 100%;
     justify-content: space-around;
     padding: 20px 0;
     max-width: 99%;
   }
 
-  #bx_TopBanner .bx_TopBanner__p--span {
+  /* text */
+  #bx-{{ref}} #bx_TopBanner .bx_TopBanner__p--span {
     padding-left: 10px;
     line-height: 1.15;
     margin-bottom: 6px;
   }
 
-  #bx_TopBanner .bx_TopBanner__p {
+  /* text container */
+  #bx-{{ref}} #bx_TopBanner .bx_TopBanner__p {
     flex-direction: column;
     align-items: center;
     height: 100%;
     text-align: left;
   }
   
-  #bx_TopBanner {
+  /* banner container */
+  #bx-{{ref}} #bx_TopBanner {
     height: 110px;
   }
   
-  body.show-TopBanner {
+  #bx-{{ref}} body.show-TopBanner {
     margin-top: 110px !important;
   }
-
-  .bx__btn-close__icon {
+  /* close btn */
+  #bx-{{ref}} .bx__btn-close {
       top: 10px;
   }
-
 }
 
 
